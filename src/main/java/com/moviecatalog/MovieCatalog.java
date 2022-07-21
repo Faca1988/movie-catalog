@@ -1,5 +1,5 @@
 
-package com.accenture.moviecatalog;
+package com.moviecatalog;
 
 public class MovieCatalog {
 

@@ -1,5 +1,5 @@
 
-package com.accenture.moviecatalog.exception;
+package com.moviecatalog.exception;
 
 public class ExceptionWriteData {
     
