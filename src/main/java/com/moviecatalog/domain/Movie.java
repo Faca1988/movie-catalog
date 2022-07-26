@@ -5,11 +5,7 @@ public class Movie {
     private String movieName;
     
     public Movie(){}
-    
-    public Movie(String name){
-        this.movieName = name;
-    }
-    
+    public Movie(String name){ this.movieName = name; }
     public String getName(){ return this.movieName; }
     public void setName(String name){ this.movieName = name; }
 

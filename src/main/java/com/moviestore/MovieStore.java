@@ -1,7 +1,7 @@
 
-package com.moviecatalog;
+package com.moviestore;
 
-public class MovieCatalog {
+public class MovieStore {
 
     public static void main(String[] args) {
         
