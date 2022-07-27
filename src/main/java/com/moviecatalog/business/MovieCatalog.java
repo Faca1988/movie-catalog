@@ -4,14 +4,12 @@ import com.moviecatalog.data.*;
 import com.moviecatalog.domain.Movie;
 import com.moviecatalog.exception.*;
 import java.util.List;
-import java.util.logging.*;
 
 public class MovieCatalog implements IMovieCatalog {
 
     IDataAccess data;
 
-    public MovieCatalog() {
-    }
+    public MovieCatalog() {}
 
     @Override
     public void initFile(String fileName) {
@@ -58,7 +56,11 @@ public class MovieCatalog implements IMovieCatalog {
     public void searchMovie(String fileName, String search) {
         try {
             this.data = new FileManager();
-            this.data.search(fileName, search);
+            String result = this.data.search(fileName, search);
+            if (result != "")
+                System.out.println("Pelicula: " + result);
+            else
+                System.out.println("No se encontro");
         } catch (DataAccessException ex) {
             ex.getMessage();
         }

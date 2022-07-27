@@ -45,10 +45,10 @@ public class FileManager implements IDataAccess {
             if (exist(fileName)) {
                 try {
                     var writer = new BufferedWriter(new FileWriter(fileName, append));
-                    writer.write(movie.getName());
+                    writer.write(movie.getName()+"\n");
                     writer.close();
                 } catch (IOException ex) {
-                    throw new WriteDataException(ex.getMessage());
+                    throw new WriteDataException("Exception: imposible write the movie.\n" + ex.getMessage());
                 }
             }else{
                 this.create(fileName);
@@ -83,6 +83,7 @@ public class FileManager implements IDataAccess {
         } catch (IOException ex) {
             throw new ReadDataException(ex.getMessage());
         }
+        
         return foundedSearch;
     }
 
